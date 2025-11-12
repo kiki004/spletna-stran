@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Registracija</title>
+</head>
+<body>
+    <h2>Registracija</h2>
+    <form action="/registracija-submit/" method="POST">
+        <label for="name">Uporabniško ime:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="geslo">Geslo:</label><br>
+        <input type="text" id="geslo" name="geslo" required><br><br>
+
+        <button type="submit">Registriraj</button>
+    </form>
+
+    <p>{{ infotext }}</p>
+</body>
+</html>

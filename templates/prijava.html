@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <title>Prijava</title>
+</head>
+<body>
+    <h2>Prijava uporabnika</h2>
+
+    <form action="/prijava-submit/" method="POST">
+        <label for="name">Uporabniško ime:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="geslo">Geslo:</label><br>
+        <input type="password" id="geslo" name="geslo" required><br><br>
+
+        <button type="submit">Prijava</button>
+    </form>
+
+    <p style="color: red;">{{ napaka }}</p>
+    <p><a href="/registracija/">Še nimaš računa? Registriraj se.</a></p>
+</body>
+</html>

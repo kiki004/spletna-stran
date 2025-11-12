@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #00aaff, #0066ff);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 40px 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0066ff;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        input, textarea, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            border-color: #0066ff;
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 102, 255, 0.5);
+        }
+
+        button {
+            background-color: #0066ff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0044cc;
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            color: green;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h1>Contact Us</h1>
+        <form id="contactForm" action="/odaja">
+            prijava: {{infotext}}
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" required>
+
+            <label for="text">Geslo</label>
+            <input type="text" id="geslo" name="geslo" placeholder="geslo" required>
+
+            <label for="topic">Topic</label>
+            <select id="topic" name="topic" required>
+                <option value="">-- Select a Topic --</option>
+                <option value="support">Support</option>
+                <option value="feedback">Feedback</option>
+                <option value="inquiry">General Inquiry</option>
+            </select>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Type your message..." required></textarea>
+
+            <button type="submit">{{odaja}}</button>
+        </form>
+
+        <p class="success-message" id="success">✅ Your message has been sent successfully!</p>
+        <p class="success-message" id="niuspelo">Narobe!</p>
+
+    </div>
+
+    
+
+</body>
+</html>
